@@ -272,6 +272,9 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .aspect-4\/3 {
     aspect-ratio: 4/3;
   }
@@ -353,8 +356,14 @@
   .flex-none {
     flex: none;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .snap-x {
     scroll-snap-type: x var(--tw-scroll-snap-strictness);
@@ -474,6 +483,9 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .bg-amber-600 {
+    background-color: var(--color-amber-600);
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
@@ -551,6 +563,12 @@
   }
   .pb-12 {
     padding-bottom: calc(var(--spacing) * 12);
+  }
+  .pl-2 {
+    padding-left: calc(var(--spacing) * 2);
+  }
+  .pl-3 {
+    padding-left: calc(var(--spacing) * 3);
   }
   .pl-5 {
     padding-left: calc(var(--spacing) * 5);
@@ -634,8 +652,15 @@
   .text-yellow-800 {
     color: var(--color-yellow-800);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .opacity-90 {
     opacity: 90%;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .outline-none {
     --tw-outline-style: none;
@@ -747,6 +772,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -755,6 +785,7 @@
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-outline-style: solid;
     }
   }
 }
